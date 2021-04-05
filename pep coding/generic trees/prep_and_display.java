@@ -1,5 +1,6 @@
 import java.util.ArrayDeque;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.Queue;
 import java.util.Stack;
 public class prep_and_display {
@@ -82,6 +83,100 @@ return res;
         }
         System.out.println(".");
       }
+      /////////remoce cell nodes/////////////
+      public static void removeLeaves(Node node){
+          //////array list me ulta triverse karte hai taki hmara index na chla jaye kyoki agar age se karenge to peche ka sara content ek ek pehe shift ho jayega //
+        for(int i = node.children.size()-1;i>=0;i--){
+            Node child = node.children.get(i);
+            if(child.children.size()==0){
+                node.children.remove(i);
+            }
+        }
+        ///////fir oske har ek children par check karke ayenge////
+        for(Node child : node.children){
+            removeLeaves(child);
+        }
+      }
+      ////////////mirror the tree///////////
+      public static void mirror(Node node){
+          //////////jo bhi children ki child ki jo arraylist hai ose reverse karo//////////////////
+        Collections.reverse(node.children);
+        /////////har ek child ko ja ke reverse kar do;
+        for(Node child:node.children){
+            mirror(child);
+        }
+      }
+      //////////////Are Trees Similar In Shape///////////////////
+      public static boolean areSimilar(Node n1, Node n2) {
+        if(n1.children.size()!=n2.children.size()){
+            return false;
+        }
+        ////data compare nahi karna 
+        // for(int idx = 0;idx<n1.children.size();i++){
+        //     if(n1.children.get(idx)!=n2.children.get(idx)){
+        //         return false;
+        //     }
+        // }
+        boolean a ;
+        int i =n1.children.size()-1;
+        while(i>=0){
+            Node child1 = n1.children.get(i);
+             Node child2 = n2.children.get(i);
+             a = areSimilar(child1, child2);
+           if(a==false){
+               return false;
+           }
+           i--;
+        }
+        return true;
+      }
+
+      ////////////is two trees are mirror of each other////////////
+      public static boolean areMirror(Node n1, Node n2) {
+        if(n1.children.size()!=n2.children.size()){
+            return false;
+        }
+        int i = n1.children.size()-1;
+        
+        while(i>=0){
+            Node child1 = n1.children.get(i);
+            Node child2 = n2.children.get(n1.children.size()-1-i);
+            if(areMirror(child1,child2)==false){
+                return false;
+            }
+            i--;
+        }
+        return true;
+      }
+      /////////////////// is symmetric ke liye vo khud ka hi mirror image hona chaie
+  public static boolean IsSymmetric(Node node) {
+    return areMirror(node,node);
+}
+///////////////// Ceil And Floor In Generic Tree //////////////////
+static int ceil = Integer.MAX_VALUE;
+static int floor = Integer.MIN_VALUE;
+public static void ceilAndFloor(Node node, int data) {
+    ///know category
+   /////for min category
+    if(node.Data<data){
+        ////agar floor ki value se bda hai
+        if(node.Data>floor){
+            floor = node.Data;
+        }
+    }
+    ////for max category
+    if(node.Data>data){
+        ///////////agar ceil bada hai node data se
+        if(node.Data<ceil){
+            ceil = node.Data;
+        }
+    }
+    
+  for(Node child: node.children){
+      ceilAndFloor(child,data);
+  }
+}
+      ////////////zones /////////////////
       public static void zones(Node node){
           System.out.println("Node pre area "+node.Data);
           for(Node child:node.children){
