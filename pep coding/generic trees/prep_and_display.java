@@ -176,6 +176,72 @@ public static void ceilAndFloor(Node node, int data) {
       ceilAndFloor(child,data);
   }
 }
+
+//////////////find kth largest element of the tree//////////////
+public static int kthLargest(Node node, int k){
+    //////////max value ans me dal do
+    int ans = Integer.MAX_VALUE;
+    ///////k ko hatam karte hue loop chlao
+    while(k>0){
+        //////////////////floor ko set karo max -ve
+        floor = Integer.MIN_VALUE;
+        /////////isse floor me ans se choti value aa jayegi
+        ceilAndFloor(node,ans);
+        ////////ans me dal lo vo value floor ki kyoki ans dubara reset hoga
+        ans = floor;
+        ////////    loop ke liye k-- karte rho
+        k--;
+    }
+    /////ans bhej do
+    return ans;
+  }
+////////////////diameter////////
+static int dia;
+ public static int diameter(Node node) {
+     ////////////largest height
+        int h = -1;   
+        /////////second largest height
+        int sl1=0;
+        for(Node child : node.children){
+            int res = diameter(child);
+            if(res>h){
+                sl1 = h;
+                h= res;
+            }
+            else if(res>sl1){
+                sl1 = res;
+            }
+        }
+        if(h+sl1+2>dia){
+            dia =h+sl1+2; 
+        }
+        return h+1;
+      }
+
+  //////////////////Predecessor And Successor Of An Element//////////////
+  static Node predecessor;
+  static Node successor;
+  static int state = 0;
+  public static void predecessorAndSuccessor(Node node, int data) {
+        if(node.Data==data){
+        state++;
+    }else  if(state == 1){
+        successor = node;
+        state++;
+    }
+    if(state == 0){
+        predecessor = node;
+      }
+   
+  
+    for(Node child:node.children){
+        predecessorAndSuccessor(child,data);
+    }
+    
+    
+  }
+
+
       ////////////zones /////////////////
       public static void zones(Node node){
           System.out.println("Node pre area "+node.Data);
