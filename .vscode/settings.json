@@ -1,5 +1,6 @@
 {
     "java.project.sourcePaths": [
-        "pep coding/hashmaps"
+        "pep coding/hashmaps",
+        "pep coding/graph"
     ]
 }
