@@ -28,7 +28,7 @@ public class Main{
                 }
             }
             System.out.println("fi"+rupee);
-            if(rupee==r){
+            if(rupee.equals(r)){
                 System.out.println("YES");
             }else{System.out.println("NO");}
             
