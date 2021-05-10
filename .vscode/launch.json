@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch graph",
+            "request": "launch",
+            "mainClass": "graph",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
             "name": "Launch hackinfyquesth",
             "request": "launch",
             "mainClass": "hackinfyquesth",
