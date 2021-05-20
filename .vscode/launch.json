@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch nqueen",
+            "request": "launch",
+            "mainClass": "nqueen",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
             "name": "Launch prep",
             "request": "launch",
             "mainClass": "prep",

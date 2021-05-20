@@ -33,7 +33,11 @@ public class Main{
         //     }else{System.out.println("NO");}
             
         // }
-              for(int n =0;n<num;n++){
+           
+        
+
+        ///code forces ans 1
+        for(int n =0;n<num;n++){
                   long a = scn.nextLong();
                   if(a==2){
                     System.out.println(1);
