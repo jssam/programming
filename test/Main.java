@@ -38,21 +38,24 @@ public class Main{
 
         ///code forces ans 1
         for(int n =0;n<num;n++){
-                  long a = scn.nextLong();
-                  if(a==2){
-                    System.out.println(1);
-                    continue;
-                  }
-                  long c= 1;
-                  long x = 0;
-                  while(a>=x){
-                     x= (1<<(c));
-                     c++;
-                  }
-                  x = x/2;
-                  System.out.println(x-1);
-              }     
-     
+          long a = scn.nextLong();
+          if(a==2){
+            System.out.println(1);
+            continue;
+          }
+          long c= 1;
+        double x = 0;
+          while(a>=x){
+             x= Math.pow(2, c);
+             c++;
+          }
+          x = x/2;
+          System.out.println((int)(x-1));
+      }
     }
 }
+
+
+
+
     
