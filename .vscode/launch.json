@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch CandidateCode",
+            "request": "launch",
+            "mainClass": "CandidateCode",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
+            "name": "Launch Cakezoned",
+            "request": "launch",
+            "mainClass": "Cakezoned",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
             "name": "Launch nqueen",
             "request": "launch",
             "mainClass": "nqueen",
