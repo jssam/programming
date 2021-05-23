@@ -37,20 +37,37 @@ public class Main{
         
 
         ///code forces ans 1
-        for(int n =0;n<num;n++){
-          long a = scn.nextLong();
-          if(a==2){
-            System.out.println(1);
-            continue;
+        for(int x =0;x<num;x++){
+          int a = scn.nextInt();
+        //   if(a==2){
+        //     System.out.println(1);
+        //     continue;
+        //   }
+        //   long c= 1;
+        // double x = 0;
+        //   while(a>=x){
+        //      x= Math.pow(2, c);
+        //      c++;
+        //   }
+        //   x = x/2;
+        //   System.out.println((int)(x-1));
+
+   
+          int ans = 0;
+        for(int i = 1;i<=a;i++){
+          int n = 0;
+          for(int j=i;j<=a;j++){
+                 n = n +j;
+              if(n>a){
+                break;
+              }else if(n==a){
+                ans++;
+                break;
+              }
           }
-          long c= 1;
-        double x = 0;
-          while(a>=x){
-             x= Math.pow(2, c);
-             c++;
-          }
-          x = x/2;
-          System.out.println((int)(x-1));
+      } 
+
+      System.out.println("Case #"+(x+1)+":"+" "+ans);
       }
     }
 }
