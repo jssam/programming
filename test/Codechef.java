@@ -119,6 +119,18 @@ public static void arrmaker(int [][]arr){
 			j++;
 		}
 	}
+	for(int i = 1;i<arr.length;i++){
+		int j = arr.length-1;
+		int n = i;
+		while(n<arr.length&&j>i){
+			arr[n][j] = sum;
+			sum++;
+			n++;
+			j--;
+		}
+	}
+
+
 }
 }
 
