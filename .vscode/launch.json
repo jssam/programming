@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch beauty",
+            "request": "launch",
+            "mainClass": "beauty",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
             "name": "Launch CandidateCode",
             "request": "launch",
             "mainClass": "CandidateCode",
