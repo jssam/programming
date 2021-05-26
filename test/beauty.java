@@ -71,7 +71,7 @@ public final class beauty
 		}
 		int res=0;
 		for(int i=1;i<=n;i++)
-		{
+        {
 			for(int j=0;j<26;j++)
 			{
 				if(dp[i][j]>res)
@@ -80,10 +80,7 @@ public final class beauty
 		}
 		return res;
 	}
-	
-	
-	
-	
+
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		Scanner sc = new Scanner(System.in);
