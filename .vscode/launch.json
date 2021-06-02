@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch beautygraph",
+            "request": "launch",
+            "mainClass": "beautygraph",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
+            "name": "Launch substing",
+            "request": "launch",
+            "mainClass": "substing",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
             "name": "Launch inpu",
             "request": "launch",
             "mainClass": "inpu",

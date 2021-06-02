@@ -29,8 +29,8 @@ public final class beauty
 			sam[0]=-1;
             return ;
 		}
-		if(used[u]!=0)
-		return;
+		if(used[u]!=0){
+		return;}
 		used[u]=k;
 		int v;
 		for(int i=l[u];i!=0;i=p[i])
@@ -54,6 +54,7 @@ public final class beauty
 		for(int[] r : dp){
 			Arrays.fill(r,0);
 		}
+		lg = 0;
 		Arrays.fill(g,0);
 		Arrays.fill(p,0);
 		Arrays.fill(l,0);
@@ -84,18 +85,21 @@ public final class beauty
 	public static void main (String[] args) throws java.lang.Exception
 	{
 		Scanner sc = new Scanner(System.in);
-		int n = sc.nextInt();
-		int m = sc.nextInt();
-		String s = sc.next();
-		int x[] = new int[m];
-		int y[]= new int[m];
-		for(int i=0;i<m;i++)
-		{
-		x[i]=sc.nextInt();
-		y[i] = sc.nextInt();
+		int t = sc.nextInt();
+		while(t--!=0){
+			int n = sc.nextInt();
+			int m = sc.nextInt();
+			String s = sc.next();
+			int x[] = new int[m];
+			int y[]= new int[m];
+			for(int i=0;i<m;i++)
+			{
+			x[i]=sc.nextInt();
+			y[i] = sc.nextInt();
+			}
+			// beauty sol = new beauty();
+			int ans = beauty1(n,m,s,x,y);
+			System.out.println(ans);
 		}
-		// beauty sol = new beauty();
-		int ans = beauty1(n,m,s,x,y);
-		System.out.println(ans);
 	}
 }
