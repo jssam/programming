@@ -3,6 +3,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.Scanner;
 import java.util.StringTokenizer;
+import java.util.*;
 
 public class input {
 	static class FastReader {
@@ -49,29 +50,61 @@ public class input {
 			return str;
 		}
 	}
-
+	public static int gcd(int a,int b){
+		if(b==0){return a;}else{
+			return gcd(b,a%b);
+		}
+	}
 	public static void main(String[] args)
 	{
-        long starttime = System.currentTimeMillis();
+        // long starttime = System.currentTimeMillis();
 		FastReader fr = new FastReader();
 		int t= fr.nextInt();
-        String hello = fr.nextLine();
-        System.out.println(hello);
+        
 		while(t-->0){
-		    int n= fr.nextInt();
-		    int a[] = new int[n];
-		    int max = 10001;
-		    for(int i=0;i<n;i++){
-		        a[i] = fr.nextInt();
-		        max= Math.min(max,a[i]);
-		    }
-		    int moves=0;
-		    for(int i=0;i<n;i++){
-		        moves+=a[i]-max;
-		    }
-		    System.out.println(moves);
+		    int a= fr.nextInt();
+			int arr[] = new int[a];
+		
+			int min = fr.nextInt();
+
+			int max = fr.nextInt();
+
+			for(int i = 0;i<a;i++){
+				arr[i] = fr.nextInt();
+			}
+			Arrays.sort(arr);
+			int i = 0;
+			int j = arr.length-1;
+			int s = 0;
+			while(i<j){
+				if(arr[i]+arr[j]<min){
+					i++;
+				}else if(arr[i]+arr[j]>max){
+					j--;
+				}else{
+					
+				}
+			}
+			
+				System.out.println(s);
+
+		    // int b= fr.nextInt();
+		    // int c= fr.nextInt();
+		    // int d= fr.nextInt();
+			// int a1 = Math.max(a,b);
+			// int a2 = Math.min(a,b);
+			// int b1 = Math.max(c,d);
+			// int b2 = Math.min(c,d);
+			
+			// if(b2>a1||a2>b1){
+			// 	System.out.println("NO");
+			// }else{
+			// 	System.out.println("YES");
+
+			// }
+		  
 		}
-        long endtime = System.currentTimeMillis();
-        System.out.println(endtime-starttime);
+        // long endtime = System.currentTimeMillis();
+        // System.out.println(endtime-starttime);
 	}
 }
