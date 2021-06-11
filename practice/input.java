@@ -55,7 +55,7 @@ public class input {
 			return gcd(b,a%b);
 		}
 	}
-	public static void main(String[] args)
+	 static public void main(String[] args)
 	{
         // long starttime = System.currentTimeMillis();
 		FastReader fr = new FastReader();
@@ -81,8 +81,6 @@ public class input {
 					i++;
 				}else if(arr[i]+arr[j]>max){
 					j--;
-				}else{
-					
 				}
 			}
 			
