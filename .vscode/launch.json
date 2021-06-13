@@ -6,6 +6,34 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch codeforces",
+            "request": "launch",
+            "mainClass": "codeforces",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
+            "name": "Launch walmart_sec",
+            "request": "launch",
+            "mainClass": "walmart_sec",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
+            "name": "Launch walmart",
+            "request": "launch",
+            "mainClass": "walmart",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
+            "name": "Launch interview",
+            "request": "launch",
+            "mainClass": "interview",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
             "name": "Launch beautygraph",
             "request": "launch",
             "mainClass": "beautygraph",
