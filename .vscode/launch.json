@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch leetcode",
+            "request": "launch",
+            "mainClass": "leetcode",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
             "name": "Launch codeforces",
             "request": "launch",
             "mainClass": "codeforces",
