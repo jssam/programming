@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch justpay",
+            "request": "launch",
+            "mainClass": "justpay",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
+            "name": "Launch codeforcesArate",
+            "request": "launch",
+            "mainClass": "codeforcesArate",
+            "projectName": "java_99f42333"
+        },
+        {
+            "type": "java",
             "name": "Launch leetcode",
             "request": "launch",
             "mainClass": "leetcode",
